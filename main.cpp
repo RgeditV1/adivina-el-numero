@@ -1,75 +1,29 @@
-/*Juego de Adivinar el numero*/
+#define TITLE 'Adivina el numero'
+#define AUTHOR 'RgeditV1'
+#define VERSION '1.1'
 
-//Author: RgeditV1
-//Version: 1.0
-
-/*
- puedes hacer PR en este repositorio creando tu propia carpeta,
- se que aun faltan cositas como el contador de intentos, hacer que el numero random entre en un ciclo para que vuelva a generar si fallas...
- pero puedes comentar algunas mejoras o agregar features
- 
- en las proximas veriones agregare algunas mejoras, eso si tengo tiempo..
-*/
-
+#include "src/heads/logica.h"
 #include <iostream>
-#include <cstdlib>
-using namespace std;
 
-/* NIVELES DE DIFICULTAD*/
+using std::cout;
+using std::cin;
 
-void facil();
-
-void medio();
-
-void dificil();
-
-/*FIN DE LOS PROTOTIPOS*/
 int main()
 {
 	//Mensaje de Bienvenida
-	cout<<"\tBIENVENIDO A ADIVINA EL NUMERO"<<endl;
-	cout<<"Selecciona el nivel de dificultad\n";
+	cout << "\tBIENVENIDO A ADIVINA EL NUMERO\n";
+	cout << "Selecciona el nivel de dificultad\n";
 	
-	//Variable donde se almacenara la opcion
-	int sel = 0;
-	
-	//Este bucle nos permitirar evaluar cual es la difultad que queremos
-	do
-	{
-		cout<<"[1]Facil"<<endl;
-		cout<<"[2]Medio"<<endl;
-		cout<<"[3]Dificil"<<endl;
-		cout<<"[5]Salir"<<endl;
-		
-		cout<<"!Ingresa un numero: "; cin>>sel;
-		
-	}while(sel > 3  || sel < 0);//mientras que sel sea mayor que tres o menor que cero, el bucle continuara
-	
-	//Evaluara que dificultad va a llamar dependiendo del numero almacenado en la variable sel
-	if(sel == 1)
-	{
-		cout<<"\nTe dare numeros del 1 al 10, tendras que adivinar, Listo?\n";
-		cout<<"mmm... en que numero estoy pensando ahora?\n";
-		facil();
-	}
-	else if(sel == 2)
-	{
-		cout<<"\nTe dare numeros del 1 al 30, tendras que adivinar, Listo?\n";
-		cout<<"mmm... en que numero estoy pensando ahora?\n";
-		medio();
-	}
-	else if(sel == 3)
-	{
-		cout<<"\nTe dare numeros del 1 al 50, tendras que adivinar, Listo?\n";
-		cout<<"mmm... en que numero estoy pensando ahora?\n";
-		dificil();
-	}
-	
-	return 0;
-}
+	menu();
 
-/*	AQUI SE DEFINIRAN LAS FUNCIONES PARA QUE EL JUEGO FUNCIONE */
 
+} //END MAIN
+
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+// antigua logica
+#if 0
 void facil()
 {
 	int n = 1 +rand() %10; //Genera un numero aleatorio del 1 hasta el 10
@@ -122,3 +76,4 @@ void dificil()
 	}
 	
 }
+#endif

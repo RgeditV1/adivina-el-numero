@@ -1,3 +1,10 @@
 # archivos .exe generados
 
 *.exe
+.vs/
+mod.sln
+mod.vcxproj
+mod.vcxproj.filters
+mod.vcxproj.user
+mod/
+x64/
